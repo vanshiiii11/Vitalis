@@ -20,7 +20,15 @@ export default function AppointmentDetailPage() {
   const { data: apt, refetch } = useQuery({
     queryKey: ['appointment', appointmentId],
     queryFn: () => api.get(`/appointments/${appointmentId}`).then(r => r.data),
-    refetchInterval: apt => apt?.preVisitSummary?.llmStatus === 'PENDING' || apt?.postVisitSummary?.llmStatus === 'PENDING' ? 5000 : false,
+    // refetchInterval: apt => apt?.preVisitSummary?.llmStatus === 'PENDING' || apt?.postVisitSummary?.llmStatus === 'PENDING' ? 5000 : false,
+    refetchInterval: query => {
+      const data = query.state.data;
+
+      return data?.preVisitSummary?.llmStatus === 'PENDING' ||
+      data?.postVisitSummary?.llmStatus === 'PENDING'
+      ? 5000
+      : false;
+    },
   });
 
   const cancelMutation = useMutation({
