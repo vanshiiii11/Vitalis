@@ -1,4 +1,4 @@
-import { prisma } from '../config/db';
+import { prisma } from '../config/db.js';
 import { sendNotification } from '../services/notifications';
 
 export async function reconcileLeaveConflicts(doctorId: string, leaveDate: Date): Promise<void> {

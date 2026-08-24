@@ -1,6 +1,6 @@
 import { Router } from 'express';
 import { getDoctors, getDoctorById, getDoctorSlots, createDoctorProfile, updateDoctorProfile, getDoctorLeaves } from '../controllers/doctors';
-import { requireAuth } from '../middleware/auth';
+import { requireAuth } from '../middleware/auth.js';
 import { requireRole } from '../middleware/roles';
 const router = Router();
 router.get('/', getDoctors);

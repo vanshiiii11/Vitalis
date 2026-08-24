@@ -1,5 +1,5 @@
-import { getAuthUrl, exchangeCodeForTokens } from './calendar';
-import { prisma } from '../config/db';
+import { getAuthUrl, exchangeCodeForTokens } from './calendar.js';
+import { prisma } from '../config/db.js';
 
 export function generateGoogleAuthUrl(userId: string): string {
   return getAuthUrl(userId);

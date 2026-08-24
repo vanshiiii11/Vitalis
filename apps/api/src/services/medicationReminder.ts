@@ -1,5 +1,5 @@
-import { prisma } from '../config/db';
-import { sendNotification } from './notifications';
+import { prisma } from '../config/db.js';
+import { sendNotification } from './notifications.js';
 import { NotificationChannel, NotificationType } from '@prisma/client';
 
 export async function processMedicationReminders(): Promise<void> {

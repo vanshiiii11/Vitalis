@@ -1,5 +1,5 @@
 import nodemailer from 'nodemailer';
-import { env } from '../config/env';
+import { env } from '../config/env.js';
 
 function getTransport() {
   if (env.SMTP_HOST && env.SMTP_PASS) {

@@ -1,7 +1,7 @@
 import { Request, Response } from 'express';
-import { prisma } from '../config/db';
+import { prisma } from '../config/db.js';
 import { z } from 'zod';
-import { generatePreVisitSummary } from '../services/llm';
+import { generatePreVisitSummary } from '../services/llm.js';
 
 const symptomSchema = z.object({
   rawSymptoms: z.string().min(10),

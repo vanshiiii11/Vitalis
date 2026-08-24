@@ -1,7 +1,7 @@
 import { Request, Response } from 'express';
-import { prisma } from '../config/db';
+import { prisma } from '../config/db.js';
 import { z } from 'zod';
-import { addDoctorLeave } from '../services/doctorLeave';
+import { addDoctorLeave } from '../services/doctorLeave.js';
 
 const leaveSchema = z.object({
   doctorUserId: z.string(),

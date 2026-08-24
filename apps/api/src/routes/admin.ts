@@ -1,6 +1,6 @@
 import { Router } from 'express';
-import { createDoctorLeave, deleteDoctorLeave, getNotificationLogs, getAllDoctors, getAllAppointments } from '../controllers/admin';
-import { requireAuth } from '../middleware/auth';
+import { createDoctorLeave, deleteDoctorLeave, getNotificationLogs, getAllDoctors, getAllAppointments } from '../controllers/admin.js';
+import { requireAuth } from '../middleware/auth.js';
 import { requireRole } from '../middleware/roles';
 const router = Router();
 router.use(requireAuth, requireRole('ADMIN'));

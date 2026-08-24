@@ -1,6 +1,6 @@
 import { google } from 'googleapis';
-import { prisma } from '../config/db';
-import { env } from '../config/env';
+import { prisma } from '../config/db.js';
+import { env } from '../config/env.js';
 
 function getOAuth2Client() {
   return new google.auth.OAuth2(

@@ -1,5 +1,5 @@
 import { Request, Response, NextFunction } from 'express';
-import { AuthUser } from './auth';
+import { AuthUser } from './auth.js';
 
 export function requireRole(...roles: AuthUser['role'][]) {
   return (req: Request, res: Response, next: NextFunction) => {

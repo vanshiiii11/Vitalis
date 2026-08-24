@@ -1,6 +1,6 @@
 import { Request, Response } from 'express';
-import { prisma } from '../config/db';
-import { getAuthUrl, exchangeCodeForTokens } from '../services/calendar';
+import { prisma } from '../config/db.js';
+import { getAuthUrl, exchangeCodeForTokens } from '../services/calendar.js';
 
 export async function initiateOAuth(req: Request, res: Response) {
   const state = req.user!.id;

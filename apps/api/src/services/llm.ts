@@ -1,6 +1,6 @@
 import Anthropic from '@anthropic-ai/sdk';
 import { z, ZodSchema } from 'zod';
-import { env } from '../config/env';
+import { env } from '../config/env.js';
 
 const isPlaceholderKey = !env.ANTHROPIC_API_KEY || env.ANTHROPIC_API_KEY.includes('your-anthropic-api-key') || env.ANTHROPIC_API_KEY.length < 10;
 

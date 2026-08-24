@@ -1,6 +1,6 @@
-import { prisma } from '../config/db';
+import { prisma } from '../config/db.js';
 import { NotificationChannel, NotificationType, NotificationStatus } from '@prisma/client';
-import { sendEmail, buildConfirmationEmail, buildReminderEmail, buildCancellationEmail, buildRescheduleEmail } from './email';
+import { sendEmail, buildConfirmationEmail, buildReminderEmail, buildCancellationEmail, buildRescheduleEmail } from './email.js';
 
 export async function sendNotification(args: {
   appointmentId: string;
@@ -56,7 +56,7 @@ export async function sendNotification(args: {
 }
 
 async function attemptEmailSend(type: NotificationType, payload: any): Promise<{ success: boolean; error?: string }> {
-  const { sendEmail: send, buildConfirmationEmail, buildReminderEmail, buildCancellationEmail, buildRescheduleEmail } = await import('./email');
+  const { sendEmail: send, buildConfirmationEmail, buildReminderEmail, buildCancellationEmail, buildRescheduleEmail } = await import('./email.js');
   let html = '';
   let subject = '';
   switch (type) {

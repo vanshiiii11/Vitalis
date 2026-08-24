@@ -1,8 +1,8 @@
 import { Request, Response } from 'express';
 import bcrypt from 'bcryptjs';
 import jwt from 'jsonwebtoken';
-import { prisma } from '../config/db';
-import { env } from '../config/env';
+import { prisma } from '../config/db.js';
+import { env } from '../config/env.js';
 import { z } from 'zod';
 
 const registerSchema = z.object({

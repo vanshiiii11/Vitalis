@@ -1,6 +1,6 @@
 import { Router } from 'express';
 import { holdSlot, confirmAppointment, cancelAppointment, rescheduleAppointment, getMyAppointments, getAppointmentById } from '../controllers/appointments';
-import { requireAuth } from '../middleware/auth';
+import { requireAuth } from '../middleware/auth.js';
 import { requireRole } from '../middleware/roles';
 const router = Router();
 router.get('/my', requireAuth, getMyAppointments);

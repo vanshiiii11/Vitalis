@@ -1,19 +1,19 @@
 import 'dotenv/config';
 import express, { Request, Response, NextFunction } from 'express';
 import cors from 'cors';
-import { connectDB } from './config/db';
-import { env } from './config/env';
-import { jobQueue } from './services/queue';
-import { releaseExpiredHolds } from './jobs/holdExpiry';
-import { retryFailedNotifications } from './jobs/notificationRetry';
+import { connectDB } from './config/db.js';
+import { env } from './config/env.js';
+import { jobQueue } from './services/queue.js';
+import { releaseExpiredHolds } from './jobs/holdExpiry.js';
+import { retryFailedNotifications } from './jobs/notificationRetry.js';
 
-import authRoutes from './routes/auth';
-import doctorRoutes from './routes/doctors';
-import appointmentRoutes from './routes/appointments';
-import symptomRoutes from './routes/symptoms';
-import postVisitRoutes from './routes/postVisit';
-import adminRoutes from './routes/admin';
-import calendarRoutes from './routes/calendar';
+import authRoutes from './routes/auth.js';
+import doctorRoutes from './routes/doctors.js';
+import appointmentRoutes from './routes/appointments.js';
+import symptomRoutes from './routes/symptoms.js';
+import postVisitRoutes from './routes/postVisit.js';
+import adminRoutes from './routes/admin.js';
+import calendarRoutes from './routes/calendar.js';
 
 const app = express();
 

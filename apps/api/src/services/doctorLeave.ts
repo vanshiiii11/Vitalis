@@ -1,5 +1,5 @@
-import { prisma } from '../config/db';
-import { reconcileLeaveConflicts } from '../jobs/leaveReconciliation';
+import { prisma } from '../config/db.js';
+import { reconcileLeaveConflicts } from '../jobs/leaveReconciliation.js';
 
 export async function addDoctorLeave(doctorUserId: string, dateStr: string, reason?: string) {
   const profile = await prisma.doctorProfile.findUnique({ where: { userId: doctorUserId } });

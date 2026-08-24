@@ -1,7 +1,7 @@
 import { Request, Response } from 'express';
-import { prisma } from '../config/db';
+import { prisma } from '../config/db.js';
 import { z } from 'zod';
-import { generatePostVisitSummary } from '../services/llm';
+import { generatePostVisitSummary } from '../services/llm.js';
 
 const prescriptionItemSchema = z.object({
   drug: z.string(),

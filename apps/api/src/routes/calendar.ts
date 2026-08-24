@@ -1,6 +1,6 @@
 import { Router } from 'express';
-import { initiateOAuth, oauthCallback, getCalendarStatus } from '../controllers/calendar';
-import { requireAuth } from '../middleware/auth';
+import { initiateOAuth, oauthCallback, getCalendarStatus } from '../controllers/calendar.js';
+import { requireAuth } from '../middleware/auth.js';
 const router = Router();
 router.get('/auth', requireAuth, initiateOAuth);
 router.get('/oauth/callback', oauthCallback);

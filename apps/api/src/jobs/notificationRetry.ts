@@ -1,6 +1,6 @@
-import { prisma } from '../config/db';
-import { sendEmail, buildConfirmationEmail, buildReminderEmail, buildCancellationEmail, buildRescheduleEmail } from '../services/email';
-import { env } from '../config/env';
+import { prisma } from '../config/db.js';
+import { sendEmail, buildConfirmationEmail, buildReminderEmail, buildCancellationEmail, buildRescheduleEmail } from '../services/email.js';
+import { env } from '../config/env.js';
 
 const MAX_RETRIES = parseInt(env.MAX_NOTIFICATION_RETRIES || '3');
 

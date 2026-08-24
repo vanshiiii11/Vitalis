@@ -1,10 +1,10 @@
 import { Request, Response } from 'express';
-import { prisma } from '../config/db';
+import { prisma } from '../config/db.js';
 import { z } from 'zod';
-import { env } from '../config/env';
+import { env } from '../config/env.js';
 import { sendNotification } from '../services/notifications';
-import { createCalendarEvent } from '../services/calendar';
-import { removeCalendarSync, updateCalendarSync } from '../services/calendarSync';
+import { createCalendarEvent } from '../services/calendar.js';
+import { removeCalendarSync, updateCalendarSync } from '../services/calendarSync.js';
 
 const holdSchema = z.object({
   doctorId: z.string(),

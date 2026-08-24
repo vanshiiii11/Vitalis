@@ -1,4 +1,4 @@
-import { prisma } from '../config/db';
+import { prisma } from '../config/db.js';
 
 export async function releaseExpiredHolds(): Promise<void> {
   const result = await prisma.appointment.updateMany({

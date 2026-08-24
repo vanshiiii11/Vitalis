@@ -1,5 +1,5 @@
-import { createCalendarEvent, updateCalendarEvent, deleteCalendarEvent } from './calendar';
-import { prisma } from '../config/db';
+import { createCalendarEvent, updateCalendarEvent, deleteCalendarEvent } from './calendar.js';
+import { prisma } from '../config/db.js';
 
 export async function syncAppointmentToCalendar(appointmentId: string): Promise<void> {
   const apt = await prisma.appointment.findUnique({
