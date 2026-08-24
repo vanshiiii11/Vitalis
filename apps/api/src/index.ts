@@ -20,6 +20,7 @@ const app = express();
 // Allow all localhost origins for development, or the specific FRONTEND_URL for production
 const allowedOrigins = [
   env.FRONTEND_URL,
+  'https://vitalis-2ctc9y6na-vanshika23bce10036-1174s-projects.vercel.app',
   'http://localhost:5173',
   'http://localhost:5174',
   'http://localhost:3000',
