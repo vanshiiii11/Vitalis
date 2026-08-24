@@ -3,7 +3,9 @@
 A production-grade clinical appointment system supporting three roles (Patient, Doctor, Admin) with AI-powered pre-visit and post-visit summaries, Google Calendar integration, and bulletproof double-booking prevention.
 
 ---
-
+## Live Demo
+- **Frontend:** https://vitalis-2ctc9y6na-vanshika23bce10036-1174s-projects.vercel.app
+- **Backend:** https://vitalis-g664.onrender.com
 ## Architecture
 
 ```
