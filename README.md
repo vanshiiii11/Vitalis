@@ -4,8 +4,8 @@ A production-grade clinical appointment system supporting three roles (Patient, 
 
 ---
 ## Live Demo
-- **Frontend:** https://vitalis-2ctc9y6na-vanshika23bce10036-1174s-projects.vercel.app
-- **Backend:** https://vitalis-g664.onrender.com
+- **Frontend URL (Vercel):** https://vitalis-2ctc9y6na-vanshika23bce10036-1174s-projects.vercel.app
+- **Backend URL (Render):** https://vitalis-g664.onrender.com
 ## Architecture
 
 ```
